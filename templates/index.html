@@ -1,0 +1,95 @@
+<html>
+<head>
+<style>
+
+div {
+  width: 300px;
+  border: 5px solid white;
+  padding: 50px;
+  margin: auto;
+}
+img {
+  width: 50%;
+  border-radius: 25%;
+  
+  
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 15%;
+}
+h1 {
+
+font-family: Algerian, sans-serif;
+
+font-weight: bold;
+margin-top: 0px;
+margin-bottom: 1px;
+}
+h2 {
+
+font-family: Microsoft Sans Serif, sans-serif;
+margin-top: 0px;
+margin-bottom: 1px;
+}
+
+.button {
+  background-color: #f44336;; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+input[type=number], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 2px solid red;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+
+</style>
+</head>
+<title>Onion Price Prediction</title>
+
+<body style="background-color:powderblue;">
+
+
+    <img src="{{url_for('static',filename='images/c.jpg')}}" alt="pqr" width="50" height="190" align="middle" class="center">    
+    <h1 align="center">Onion Price Prediction</h1>
+    
+    <form name="MY Form" action="/predict" method="POST">
+        <div align="center">
+	    
+           <h2>Day</h2><input type="number" name="text1" max=31 min=1><br><br>
+	    <h2>Month</h2> <input type="number" name="text2" max=12 min=1><br><br>
+	    <h2>Year</h2> <input type="number" name="text3"><br><br>
+            
+            <br><br>
+	    <input type="submit" name="button1" value="Predict Price" class="button">
+            
+        </div>
+	
+    </form>
+    
+</body>
+
+</html>
